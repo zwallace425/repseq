@@ -1,7 +1,10 @@
+## Selecting a subset of representative genomic sequences from a larger set of diverse sequences
+
 We are design an algorithm based on the following computational problem statement:
 
 Definitions:
 Given a globally aligned set of genome strings S and a threshold parameter delta d, we wish to find the smallest subset s from S in which for any string within S, there exists a string in s such that their alignment score is at least d.
+
 We can assume that any pair of sequences of the set S are globally aligned. Given a match reward, a mismatch penalty, and an indel penalty value, we can compute the alignment score between two aligned sequences as (number of matches * match reward - number of mismatches * mismatch penalty - number of indels * indel penalty).
 
 Input: 
