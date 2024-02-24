@@ -1,0 +1,9 @@
+.DS_Store
+.vscode
+.idea/*
+*.linux
+*.log
+**/__pycache__/*
+.ipynb_checkpoints
+build/
+saved_elements/
