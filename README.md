@@ -4,6 +4,12 @@ The purpose of the project is to devise an algorithm that will select that small
 subset of Influenza A sequences from a large set of sequences for a given subtype 
 that best represents the diversity within entire subtype.
 
+### Dependencies
+
+Please install the appropriate python depencies for this repo using the following
+	
+	pip install jupyter biopython panel bokeh
+
 ### Comutational Problem
 
 We are designing an algorithm based on the following computational problem statement:

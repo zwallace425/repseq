@@ -22,13 +22,17 @@ def parse_fasta(fasta_file: str) -> List[str]:
 def write_fasta(
     sequences: List[str],
     output_file: str,
-    original_file: str,
 ):
     """
     :param sequences: <List[str]> List of sequences to be stored.
     :param output_file: <str> File path to write the output to.
-    :param original_file: <str> Path to the file where the sequences were extracted from.
-                                It is used to recover sequence metadata.
     """
-    raise NotImplementedError
-
+    
+    count = 0
+    file_output = open(output_file, "w")
+    for seq in sequences:
+        file_output.write(">" + str(count) + "\n")
+        file_output.write(seq + "\n")
+        count = count + 1
+    
+    file_output.close()
