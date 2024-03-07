@@ -11,12 +11,12 @@ def parse_fasta(fasta_file: str) -> List[str]:
 
     :return: <List[str]> .fasta file sequences stored in a list of strings.
     """   
-    seq_list = []
+    seq_set = set()
     for seq_record in SeqIO.parse(fasta_file, 'fasta'):
         seq = str(seq_record.seq)
-        seq_list.append(seq)
+        seq_set.add(seq)
         
-    return(seq_list)
+    return sorted(seq_set)
 
 
 def write_fasta(
