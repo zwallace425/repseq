@@ -189,7 +189,9 @@ def greedy_representative_subset(
                 else:
                     alignment_score = global_alignment_score(sequence1, sequence2, mr, mp, ip)
                 if alignment_score >= d:
-                    keep.add(sequence2)
+                    keep.add(sequence1)
+                    s.add(sequence1)
+                    s.remove(sequence2)
                     break
             else:
                 s.add(sequence1)
